@@ -1,4 +1,9 @@
 .headText {
     font-size: 40px;
     color: #423838;
+    margin-top: 10%;
+}
+
+.mainLogin {
+    border-left: 8px #843fbd solid;
 }

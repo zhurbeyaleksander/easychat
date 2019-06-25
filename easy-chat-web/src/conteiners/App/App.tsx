@@ -1,6 +1,7 @@
-import * as React from 'react';
 import'./App.css';
-import { Container, Row, Col } from 'reactstrap';
+import * as React from 'react';
+import { Col, Container, Row} from 'reactstrap';
+import LoginForm from './components/LoginForm';
 
 class App extends React.Component {
   public render() {
@@ -8,8 +9,13 @@ class App extends React.Component {
       <div className="container headText">
    <Container>
      <Row>
-       <Col sm="6">666</Col>
-       <Col sm="6">555</Col>
+       <Col xs="6" sm="6" md="6"  lg="6" xl="6">
+         <b>Easy</b> Chat - новый способ общения с друзьями
+         </Col>
+       <Col className="mainLogin" xs="6" sm="6" md="6"  lg="6" xl="6">
+       <LoginForm />
+       Регистрация
+       </Col>
      </Row>
    </Container>
       </div>
