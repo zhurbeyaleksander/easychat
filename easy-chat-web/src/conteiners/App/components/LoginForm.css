@@ -3,3 +3,11 @@
     color: #ffffff;
     padding: 10px;
 }
+
+.mainLoginInput {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    outline: none;
+    color: #333333;
+}

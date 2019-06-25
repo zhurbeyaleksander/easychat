@@ -6,14 +6,11 @@ class LoginForm extends React.Component {
   public render() {
     return (
         <form>
-       <label>
-      Логин: <input type="text" name="name" />
-    </label>
-    <label>
-      Пароль: <input type="text" name="name" />
-    </label>
-    <input type="submit" className="mainLoginButton" value="Войти" />
-  </form>
+       <input className="mainLoginInput" type="text" placeholder="Логин" name="name" />
+       <input className="mainLoginInput" type="password" placeholder="Пароль" name="name" />
+       <br/><br/>
+       <input type="submit" className="mainLoginButton" value="Войти" />
+       </form>
     );
   }
 }
