@@ -1,7 +1,7 @@
 .mainLoginButton {
-    background: #843fbd;
-    color: #ffffff;
+    font-size: 30px;
     padding: 10px;
+    margin-top: 20px;
 }
 
 .mainLoginInput {

@@ -13,7 +13,7 @@ class App extends React.Component {
          <b>Easy</b> Chat - новый способ общения с друзьями
          </Col>
        <Col className="mainLogin" xs="6" sm="6" md="6"  lg="6" xl="6">
-       <LoginForm />
+       <LoginForm/>
        Регистрация
        </Col>
      </Row>
