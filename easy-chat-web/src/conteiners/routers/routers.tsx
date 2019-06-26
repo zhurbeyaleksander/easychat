@@ -1,8 +1,12 @@
 import * as React from 'react';
-import {Route} from  'react-router';
+import {Route, Switch} from  'react-router-dom';
 
 import { App } from '../App/App';
+import { Registration } from '../Registration/Registration'
 
 export default (
-    <Route path="/" component={App} />
+    <Switch>
+    <Route exact={true} path="/" component={App} />
+    <Route path="/registration" component={Registration} />
+    </Switch>
 );
