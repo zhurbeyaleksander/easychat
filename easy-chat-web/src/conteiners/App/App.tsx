@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Col, Container, Row} from 'reactstrap';
 import LoginForm from './components/LoginForm';
 
-class App extends React.Component {
+export class App extends React.Component {
   public render() {
     return (
       <div className="container headText">
