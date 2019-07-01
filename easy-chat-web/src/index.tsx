@@ -3,12 +3,12 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import routes from './conteiners/routers/routers';
-import {BrowserRouter} from 'react-router-dom';
+import {HashRouter} from 'react-router-dom';
 
 ReactDOM.render(
-<BrowserRouter>
+<HashRouter>
  {routes}
-</BrowserRouter>,
+</HashRouter>,
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();
