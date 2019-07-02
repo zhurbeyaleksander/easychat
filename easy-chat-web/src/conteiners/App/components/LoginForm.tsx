@@ -1,14 +1,27 @@
 import * as React from 'react';
-import './LoginForm.css'
+import './LoginForm.css';
 
-function LoginForm () {
+interface IProps {
+  submitLogin?: () => void;
+  onChangeForm?: (event: any) => void;
+};
+
+function LoginForm ({submitLogin, onChangeForm}:IProps) {
     return (
       <div>
         <form>
           <div className="form-group">
-            <input type="text" className="form-control mainLoginInput" id="login" placeholder="Логин" />
-            <input type="password" className="form-control mainLoginInput" id="password" placeholder="Пароль" />
-            <button type="button" className="btn btn-dark mainLoginButton">Easy Go </button>
+            <input type="text"
+             onChange={onChangeForm} 
+             className="form-control mainLoginInput"
+              id="login" placeholder="Логин"
+               />
+            <input 
+            type="password"
+            onChange={onChangeForm}
+             className="form-control mainLoginInput"
+              id="password" placeholder="Пароль" />
+            <button onClick={submitLogin} type="button" className="btn btn-dark mainLoginButton">Easy Go </button>
           </div>
         </form>
       </div>

@@ -3,7 +3,8 @@
     "no-console": false,
     "ordered-imports": false,
     "object-literal-sort-keys": false,
-    "object-literal-shorthand": false
+    "object-literal-shorthand": false,
+    "member-ordering": false
   },
   "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
   "linterOptions": {
