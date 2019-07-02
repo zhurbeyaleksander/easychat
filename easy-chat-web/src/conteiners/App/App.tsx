@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
 export class App extends React.Component {
   public render() {
     return (
-      <div className="container headText">
+      <div className="mainPageText">
    <Container>
      <Row>
        <Col xs="6" sm="6" md="6"  lg="6" xl="6">
