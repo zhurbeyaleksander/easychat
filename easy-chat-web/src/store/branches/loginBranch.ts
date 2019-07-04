@@ -4,6 +4,7 @@ const initialState = {
     login: null,
     password: null,
     token: null,
+    isLogin: false,
 };
 
 export function loginReducer(state= initialState, action: any) {
@@ -14,6 +15,7 @@ export function loginReducer(state= initialState, action: any) {
             login: action.props.login,
             password: action.props.password,
             token: action.props.token,
+            isLogin: true,
         }
         default:
             return state;

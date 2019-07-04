@@ -3,6 +3,8 @@ import * as React from 'react';
 import { Col, Container, Row} from 'reactstrap';
 import LoginForm from './components/LoginForm';
 import {Link} from 'react-router-dom';
+import {setLogin} from '../../store/branches/loginBranch';
+import { connect } from 'tls';
 
 interface IProps {
   login?: string,
@@ -56,4 +58,21 @@ export class App extends React.Component<IProps> {
   }
 }
 
-export default App;
+const mapStateToProps = (state: any) => {
+  console.log(state)
+  return {
+    login: state.login
+  }
+};
+
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    actions: {
+      setLogin: (login: any, password: any, token: any) => {
+        dispatch(setLogin(login, password, token))
+      }
+    }
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
