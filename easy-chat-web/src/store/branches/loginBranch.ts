@@ -7,7 +7,7 @@ const initialState = {
     isLogin: false,
 };
 
-export function loginReducer(state= initialState, action: any) {
+export function loginReducer(state = initialState, action: any) {
     switch (action.type) {
         case SET_LOGIN: 
         return {

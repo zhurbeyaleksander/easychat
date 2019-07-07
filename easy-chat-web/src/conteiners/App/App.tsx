@@ -4,14 +4,17 @@ import { Col, Container, Row} from 'reactstrap';
 import LoginForm from './components/LoginForm';
 import {Link} from 'react-router-dom';
 import {setLogin} from '../../store/branches/loginBranch';
-import { connect } from 'tls';
+import { connect } from 'react-redux';
+import {ILoginProps} from '../../models/loginModels';
 
-interface IProps {
-  login?: string,
-  password?: string,
+type IProps = ILoginProps;
+
+export interface IState {
+  login: any,
+  password?: any
 }
 
-export class App extends React.Component<IProps> {
+export class App extends React.Component<IProps, IState> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -29,11 +32,7 @@ export class App extends React.Component<IProps> {
   }
 
   private handleLoginFormChange = (event: any) => {
-    const name = event.target.id;
-
-    this.setState({
-      [name]: event.target.value
-    });
+   console.log('---')
   } 
 
   public render() {
@@ -58,10 +57,10 @@ export class App extends React.Component<IProps> {
   }
 }
 
-const mapStateToProps = (state: any) => {
-  console.log(state)
+const mapStateToProps = (store: any) => {
+  console.log(store)
   return {
-    login: state.login
+    login: store.login.login,
   }
 };
 
@@ -75,4 +74,4 @@ const mapDispatchToProps = (dispatch: any) => {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export const StartPage = connect<ILoginProps>(mapStateToProps, mapDispatchToProps)(App);
