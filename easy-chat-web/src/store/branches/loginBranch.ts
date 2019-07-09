@@ -1,7 +1,7 @@
 export const SET_LOGIN = 'SET_LOGIN';
 
 const initialState = {
-    login: null,
+    login: 'null',
     password: null,
     token: null,
     isLogin: false,
@@ -18,6 +18,7 @@ export function loginReducer(state = initialState, action: any) {
             isLogin: true,
         }
         default:
+            console.log('тут')
             return state;
     }
 }
