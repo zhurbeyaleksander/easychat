@@ -57,12 +57,15 @@ export class App extends React.Component<IProps, IState> {
   }
 }
 
-const mapStateToProps = (store: any) => {
-  console.log(store)
-  return {
-    login: store.login.login,
-  }
-};
+ // const mapStateToProps = (store: any) => {
+  // console.log('test');
+  // console.log(store);
+  // return {
+    // login: store.login.login,
+  // }
+// };
+
+
 
 const mapDispatchToProps = (dispatch: any) => {
   return {
@@ -74,4 +77,4 @@ const mapDispatchToProps = (dispatch: any) => {
   }
 };
 
-export const StartPage = connect<ILoginProps>(mapStateToProps, mapDispatchToProps)(App);
+export const StartPage = connect(mapDispatchToProps)(App);
