@@ -1,5 +1,5 @@
-import {ILoginProps} from '../models/loginModels';
+import {LoginProps} from '../models/loginModels';
 
-export interface IStore {
-    login: ILoginProps
+export interface Store {
+    login: LoginProps
 };

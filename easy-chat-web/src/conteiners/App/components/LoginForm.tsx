@@ -1,12 +1,12 @@
 import * as React from 'react';
 import './LoginForm.css';
 
-interface IProps {
+interface Props {
   submitLogin?: () => void;
   onChangeForm?: (event: any) => void;
 };
 
-function LoginForm ({submitLogin, onChangeForm}:IProps) {
+function LoginForm ({submitLogin, onChangeForm}:Props) {
     return (
       <div>
         <form>

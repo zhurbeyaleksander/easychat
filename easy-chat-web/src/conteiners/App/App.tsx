@@ -5,16 +5,16 @@ import LoginForm from './components/LoginForm';
 import {Link} from 'react-router-dom';
 import {setLogin} from '../../store/branches/loginBranch';
 import { connect } from 'react-redux';
-import {ILoginProps} from '../../models/loginModels';
+import {LoginProps} from '../../models/loginModels';
 
-type IProps = ILoginProps;
+type Props = LoginProps;
 
-export interface IState {
+export interface State {
   login: any,
   password?: any
 }
 
-export class App extends React.Component<IProps, IState> {
+export class App extends React.Component<Props, State> {
   constructor(props: any) {
     super(props);
     this.state = {

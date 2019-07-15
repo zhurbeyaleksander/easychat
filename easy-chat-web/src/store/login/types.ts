@@ -1,4 +1,4 @@
-export interface ILogin {
+export interface Login {
     login: string,
     password: string,
     token: string,
@@ -9,9 +9,9 @@ export const enum LoginActionTypes {
     SET_LOGIN = 'SET_LOGIN',
 }
 
-export interface ILoginState {
-    readonly login: string,
-    readonly password: string,
-    readonly token: string,
+export interface LoginState {
+    readonly login: any,
+    readonly password: any,
+    readonly token: any,
     readonly isLogin: boolean, 
 }

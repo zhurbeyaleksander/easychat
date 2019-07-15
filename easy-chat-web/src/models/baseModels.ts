@@ -1,3 +1,3 @@
-export interface IActionsDispatch {
+export interface ActionsDispatch {
     actions: any;
 }
