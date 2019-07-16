@@ -2,19 +2,14 @@ import'./App.css';
 import * as React from 'react';
 import { Col, Container, Row} from 'reactstrap';
 import LoginForm from './components/LoginForm';
-import {Link} from 'react-router-dom';
-import {setLogin} from '../../store/branches/loginBranch';
+import {Link, RouteComponentProps} from 'react-router-dom';
 import { connect } from 'react-redux';
-import {LoginProps} from '../../models/loginModels';
+import { ApplicationState, ConnectedReduxProps } from '../../store';
+import { Login } from '../../store/login/types';
 
-type Props = LoginProps;
+type Props = RouteComponentProps<{}> & ConnectedReduxProps & Login; 
 
-export interface State {
-  login: any,
-  password?: any
-}
-
-export class App extends React.Component<Props, State> {
+export class App extends React.Component<Props> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -36,6 +31,7 @@ export class App extends React.Component<Props, State> {
   } 
 
   public render() {
+    console.log(this.props.login)
     return (
       <div className="mainPageText">
    <Container>
@@ -57,24 +53,8 @@ export class App extends React.Component<Props, State> {
   }
 }
 
- // const mapStateToProps = (store: any) => {
-  // console.log('test');
-  // console.log(store);
-  // return {
-    // login: store.login.login,
-  // }
-// };
+const mapStateToProps = ({ login }: ApplicationState) => ({
+  login: login.login,
+});
 
-
-
-const mapDispatchToProps = (dispatch: any) => {
-  return {
-    actions: {
-      setLogin: (login: any, password: any, token: any) => {
-        dispatch(setLogin(login, password, token))
-      }
-    }
-  }
-};
-
-export const StartPage = connect(mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App);
