@@ -31,7 +31,6 @@ export class App extends React.Component<Props> {
   } 
 
   public render() {
-    console.log(this.props.login)
     return (
       <div className="mainPageText">
    <Container>
@@ -53,8 +52,13 @@ export class App extends React.Component<Props> {
   }
 }
 
-const mapStateToProps = ({ login }: ApplicationState) => ({
-  login: login.login,
-});
+const mapStateToProps = ({ login }: ApplicationState) => {
+  return {
+    login: login.login,
+    password: login.password,
+  }
+};
 
-export default connect(mapStateToProps)(App);
+
+
+export default connect<{},{},{}>(mapStateToProps)(App);
