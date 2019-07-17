@@ -53,6 +53,7 @@ export class App extends React.Component<Props> {
 }
 
 const mapStateToProps = ({ login }: ApplicationState) => {
+  console.log('test');
   return {
     login: login.login,
     password: login.password,
